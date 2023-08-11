@@ -5,9 +5,11 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6,
-p, ul, ol, blockquote {
+p, ul, ol, blockquote,
+address {
   margin: 0;
   padding: 0;
+  font-style: normal;
 }
 
 .header {
@@ -16,8 +18,13 @@ p, ul, ol, blockquote {
   margin: 92px 50px;
   width: 1340px;
   height: 109px;
+  font-size: 18px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 109px;
+}
+
+.navigation {
+  align-self: center;
 }
 
 .menu_list {
@@ -49,5 +56,9 @@ p, ul, ol, blockquote {
 }
 
 .contact_list {
-  list-style-type: none;
+  align-self: center;
+  justify-self: end;
+  display: grid;
+  background-color: crimson;
+  grid-template-columns: 1fr;
 }
