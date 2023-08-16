@@ -12,22 +12,25 @@ address {
   font-style: normal;
 }
 
+/* TODO: fix underline in menu and contacts, delete background color in all header parts, deal with width/height */
+
 .header {
   background-color: blue;
   display: grid;
-  margin: 92px 50px;
-  width: 1340px;
-  height: 109px;
+  margin: auto;
+  margin-bottom: 5%;
+  max-width: 1340px;
+  /* height: 109px; */
   font-size: 18px;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 109px;
 }
 
-.navigation {
+.header__menu {
   align-self: center;
 }
 
-.menu_list {
+.header__links-list {
   background-color: blueviolet;
   align-self: center;
   display: flex;
@@ -36,29 +39,267 @@ address {
   column-gap: 23px;
 }
 
-.li_type_1 {
+.header__links-list-item_no-bullit {
   list-style-type: none;
 }
 
-.a_style_1 {
+.header__link_no-underline {
   text-decoration: none;
 }
 
-.li_type_2 {
+.header__links-list-item {
   list-style-type: circle;
 }
 
-.header_logo_image {
-  width: 148px;
-  height: 105px;
+.header__logo {
   align-self: start;
   justify-self: center;
 }
 
-.contact_list {
+.header__logo-image {
+  width: 148px;
+  height: 105px;
+}
+
+.address {
   align-self: center;
   justify-self: end;
   display: grid;
   background-color: crimson;
   grid-template-columns: 1fr;
+}
+
+/* TODO: delete background color in all parts, deal with width/height */
+
+.cover {
+  background-color: lawngreen;
+  background-image: url(/ono-tebe-nado/images/cover.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  margin-bottom: 5%;
+}
+
+.overlay {
+  background-color: rgb(0 0 0 / 0.6);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.cover__title {
+  position: absolute;
+  inset: 165px 50px 237px 50px;
+  z-index: 1;
+  width: auto;
+  /* height: 355px; */
+}
+
+.cover__title-text {
+  text-transform: uppercase;
+  color: #FFF;
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 115%;
+  letter-spacing: 30px;
+  display: block;
+}
+
+.letter-spacing-extended {
+  letter-spacing: 60px;
+}
+
+.aligned-text {
+  background-color: darkblue;
+  display: block;
+  text-align: start;
+}
+
+.aligned-text_center {
+  background-color: gold;
+  display: block;
+  text-align: center;
+}
+
+.aligned-text_right {
+  background-color: darkgreen;
+  display: block;
+  text-align: right;
+  margin-right: -30px;
+}
+
+.cover__description {
+  background-color: lightsalmon;
+  position: absolute;
+  top: auto;
+  bottom: 62px;
+  left: 50px;
+  right: 50px;
+  z-index: 1;
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cover__description-text {
+  background-color: lightseagreen;
+  color: #FFF;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  word-spacing: 18px;
+  margin-left: 28%;
+}
+
+.bet-button {
+  background: transparent;
+  color: #FFF;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  text-transform: uppercase;
+  text-align: center;
+  border: 1px solid #FFF;
+  padding: 12px 32px;
+}
+
+.lots {
+  background-color: tomato;
+  max-width: 1340px;
+  margin: auto;
+}
+
+.lots__heading {
+  color: #000;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-left: 40px;
+}
+
+.lots__card-list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.lots__card-list-item {
+  flex-grow: 1;
+  width: 430px;
+  height: 450px;
+}
+
+/* .card-link {
+
+} */
+
+.card {
+
+  height: 100%;
+  position: relative;
+}
+
+.card_type_film {
+  background-image: url(/ono-tebe-nado/images/card-lot-01.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card_type_book {
+  background-image: url(/ono-tebe-nado/images/card-lot-02.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card_type_picture {
+  background-image: url(/ono-tebe-nado/images/card-lot-03.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card__title {
+  color: #FFF;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  position: absolute;
+  z-index: 1;
+  inset: 50px 40px auto 40px;
+  
+}
+
+.card__text {
+  color: #FFF;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  position: absolute;
+  z-index: 1;
+  inset: auto 40px 50px 40px;
+}
+
+.lots__look-more-link {
+  color: #000;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-top: 2%;
+  margin-left: 40px;
+  text-decoration: underline;
+}
+
+.about {
+  background-color: yellowgreen;
+  display: grid;
+  padding-left: 50px;
+  padding-right: 50px;
+  grid-template-columns: 430px 1fr;
+}
+
+.about__column {
+
+}
+
+.about__logo {
+  background-color: #000;
+  border-radius: 50%;
+  align-self: center;
+  justify-self: center;
+}
+
+.about__logo-image {
+  margin: auto;
+}
+
+.about__title {
+
+}
+
+.about__text {
+
 }
