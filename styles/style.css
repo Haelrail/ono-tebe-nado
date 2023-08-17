@@ -43,7 +43,7 @@ address {
   list-style-type: none;
 }
 
-.header__link_no-underline {
+.header__link_active {
   text-decoration: none;
 }
 
@@ -63,10 +63,13 @@ address {
 
 .address {
   align-self: center;
-  justify-self: end;
   display: grid;
   background-color: crimson;
   grid-template-columns: 1fr;
+}
+
+.header .address {
+  justify-self: end;
 }
 
 /* TODO: delete background color in all parts, deal with width/height */
@@ -276,30 +279,107 @@ address {
 .about {
   background-color: yellowgreen;
   display: grid;
+  width: 100%;
+  margin: 10% auto 10%;
   padding-left: 50px;
   padding-right: 50px;
   grid-template-columns: 430px 1fr;
+  column-gap: 25px;
 }
 
 .about__column {
-
+  justify-self: center;
+  display: flex;
 }
 
 .about__logo {
   background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  width: 240px;
+  height: 240px;
   border-radius: 50%;
-  align-self: center;
-  justify-self: center;
 }
 
 .about__logo-image {
   margin: auto;
+  width: 148px;
 }
 
 .about__title {
-
+  color: #000;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  padding: 100px 0px;
 }
 
 .about__text {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
 
+.about__text p {
+  color: #000;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.footer {
+  background-color: blue;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 0 50px 3% 50px;;
+}
+
+.footer .address {
+  justify-self: start;
+}
+
+.footer__menu {
+  justify-self: center;
+}
+
+.footer__menu-list {
+  text-align: center;
+}
+
+.footer__menu-list-item {
+  list-style-type: none;
+}
+
+.footer__menu-link, .footer__menu-link_active {
+  color: #000;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.footer__menu-link_active {
+  text-decoration: none;
+}
+
+.footer__social-list {
+  justify-self: end;
+  display: flex;
+  gap: 50px
+}
+
+.footer__social-list-item {
+  list-style-type: none;
+}
+
+.footer__social-link {
+
+}
+
+.footer__social-icon {
+  height: 48px;
+  width: auto;
 }
